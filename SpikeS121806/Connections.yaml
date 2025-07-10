@@ -1,0 +1,26 @@
+# Exported from:        http://Kirans-MacBook-Pro.local:5516/
+# Release version:      24.1.0
+# Date created:         Thu Jul 10 09:46:09 IST 2025
+
+---
+apiVersion: xl-release/v1
+kind: Templates
+metadata:
+  path: /
+  home: Spike-S-121806
+spec:
+- name: Test-Git-Remove_Branch
+  type: git.Repository
+  url: https://github.com/Digi109Kiran/NewOneTestDAI1
+  username: Digi109Kiran
+  password: !value "git_Repository_Test_Git_Remove_Branch_password"
+- name: Test_Branches_BitBucket
+  type: git.Repository
+  url: https://bitbucket.org/digi109kiran/test-branches
+  username: digi109kiran
+  password: !value "git_Repository_Test_Branches_BitBucket_password"
+- name: Test_Branches_Gitlab
+  type: git.Repository
+  url: https://gitlab.com/Digi109Kiran/test-branches.git
+  username: Digi109Kiran
+  password: !value "git_Repository_Test_Branches_Gitlab_password"

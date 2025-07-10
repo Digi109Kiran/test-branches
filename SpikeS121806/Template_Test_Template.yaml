@@ -1,0 +1,20 @@
+# Exported from:        http://Kirans-MacBook-Pro.local:5516/
+# Release version:      24.1.0
+# Date created:         Thu Jul 10 09:46:09 IST 2025
+
+---
+apiVersion: xl-release/v1
+kind: Templates
+metadata:
+  path: /
+  home: Spike-S-121806
+spec:
+- template: Test_Template
+  scheduledStartDate: 2025-07-07T09:00:00+05:30
+  phases:
+  - phase: New Phase
+    tasks:
+    - name: T0
+      type: xlrelease.Task
+  riskProfile: Default risk profile
+  author: admin
