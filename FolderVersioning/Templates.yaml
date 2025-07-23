@@ -1,0 +1,50 @@
+# Exported from:        http://Kirans-MacBook-Pro.local:5516/
+# Release version:      24.1.0
+# Date created:         Wed Jul 23 15:05:30 IST 2025
+
+---
+apiVersion: xl-release/v1
+kind: Templates
+metadata:
+  path: /
+  home: Folder_Versioning
+spec:
+- template: Jenkins_Template_With_Vault_password
+  scheduledStartDate: 2025-07-23T09:00:00+05:30
+  phases:
+  - phase: New Phase
+    tasks:
+    - name: T1
+      type: jenkins.Build
+      jenkinsServer: Jenkins-Server
+      jobName: Test
+      variableMapping:
+        pythonScript.password: "${folder.jenkins-vault-server-retreiver}"
+  scriptUsername: admin
+  scriptUserPassword: !value "xlrelease_Release_Jenkins_Template_With_Vault_password_scriptUserPassword"
+  riskProfile: Default risk profile
+  author: admin
+- template: Test_Get_Password_from_Vault
+  scheduledStartDate: 2025-07-23T09:00:00+05:30
+  phases:
+  - phase: New Phase
+    tasks:
+    - name: T1
+      type: vault.SecretsV2-ReadSecret
+      vaultServer: Test-Vault-Server
+      mount_point: secret
+      path: secret-path
+      key: jenkins-password
+      variableMapping:
+        pythonScript.value: "${jenkins-vault-password}"
+  variables:
+  - type: xlrelease.PasswordStringVariable
+    key: jenkins-vault-password
+    requiresValue: false
+    showOnReleaseStart: false
+    label: Value
+    description: The value to read back as a secret value
+  scriptUsername: admin
+  scriptUserPassword: !value "xlrelease_Release_Test_Get_Password_from_Vault_scriptUserPassword"
+  riskProfile: Default risk profile
+  author: admin

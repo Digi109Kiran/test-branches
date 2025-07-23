@@ -1,0 +1,21 @@
+# Exported from:        http://Kirans-MacBook-Pro.local:5516/
+# Release version:      24.1.0
+# Date created:         Wed Jul 23 15:05:30 IST 2025
+
+---
+apiVersion: xl-release/v1
+kind: Templates
+metadata:
+  path: /
+  home: Folder_Versioning
+spec:
+- name: Jenkins-Server
+  type: jenkins.Server
+  variableMapping:
+    password: "${folder.jenkins-vault-server-retreiver}"
+  url: http://localhost:8082
+  username: admin
+- name: Test-Vault-Server
+  type: vault.VaultServer
+  url: http://127.0.0.1:8200
+  token: !value "vault_VaultServer_Test_Vault_Server_token"

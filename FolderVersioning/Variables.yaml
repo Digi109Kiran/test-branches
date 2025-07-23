@@ -1,0 +1,19 @@
+# Exported from:        http://Kirans-MacBook-Pro.local:5516/
+# Release version:      24.1.0
+# Date created:         Wed Jul 23 15:05:30 IST 2025
+
+---
+apiVersion: xl-release/v1
+kind: Templates
+metadata:
+  path: /
+  home: Folder_Versioning
+spec:
+- folderVariables:
+  - type: xlrelease.PasswordStringVariable
+    key: folder.jenkins-vault-server-retreiver
+    externalVariableValue:
+      type: xlrelease.ExternalVariableValue
+      server: Test-Vault-Server
+      path: secret/data/secret-path
+      externalKey: jenkins-password
