@@ -9,7 +9,7 @@ metadata:
   path: /
   home: Folder_Versioning_Hardening
 spec:
-- template: Test_Template_Folder
+- template: Test_Template_Template
   scheduledStartDate: 2025-07-23T09:00:00+05:30
   dueDate: 2025-07-23T10:00:00+05:30
   phases:
@@ -20,14 +20,12 @@ spec:
       jobName: Test
       owner: admin
       variableMapping:
-        pythonScript.jenkinsServer: "${folder.test_Jenkins_Ref}"
+        pythonScript.jenkinsServer: "${test-jenkins-ref}"
   variables:
-  - type: xlrelease.StringVariable
-    key: test-script-fixed-val
-    valueProvider:
-      type: test.Test2ValueProvider
-      jiraServer: Test-Jira
+  - type: xlrelease.ReferenceVariable
+    key: test-jenkins-ref
+    referencedType: jenkins.Server
   scriptUsername: admin
-  scriptUserPassword: !value "xlrelease_Release_Test_Template_Folder_scriptUserPassword"
+  scriptUserPassword: !value "xlrelease_Release_Test_Template_Template_scriptUserPassword"
   riskProfile: Default risk profile
   author: admin

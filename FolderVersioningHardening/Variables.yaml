@@ -1,6 +1,6 @@
 # Exported from:        http://Kirans-MacBook-Pro.local:5516/
 # Release version:      24.1.0
-# Date created:         Wed Jul 23 11:15:00 IST 2025
+# Date created:         Wed Jul 23 12:45:26 IST 2025
 
 ---
 apiVersion: xl-release/v1
@@ -14,3 +14,7 @@ spec:
     key: folder.test_Jenkins_Ref
     value: Jenkins_Local_Global
     referencedType: jenkins.Server
+  - type: xlrelease.ReferenceVariable
+    key: folder.test-var
+    value: Test-Jira
+    referencedType: jira.Server
