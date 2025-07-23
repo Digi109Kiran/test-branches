@@ -1,0 +1,15 @@
+# Exported from:        http://Kirans-MacBook-Pro.local:5516/
+# Release version:      24.1.0
+# Date created:         Wed Jul 23 16:07:28 IST 2025
+
+---
+apiVersion: xl-release/v1
+kind: Templates
+metadata:
+  home: Test-PreGitHub
+spec:
+- name: Test-repo-
+  type: git.Repository
+  url: Digi109Kiran
+  username: https://github.com/Digi109Kiran/test-branches
+  password: !value "git_Repository_Test_repo__password"
