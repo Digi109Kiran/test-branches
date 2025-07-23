@@ -1,0 +1,26 @@
+# Exported from:        http://Kirans-MacBook-Pro.local:5516/
+# Release version:      24.1.0
+# Date created:         Wed Jul 23 11:13:53 IST 2025
+
+---
+apiVersion: xl-release/v1
+kind: Templates
+metadata:
+  path: /
+  home: Folder_Versioning_Hardening
+spec:
+- template: Test_Template_Folder
+  scheduledStartDate: 2025-07-23T09:00:00+05:30
+  phases:
+  - phase: New Phase
+    tasks:
+    - name: J1
+      type: jenkins.Build
+      jobName: Test
+      owner: admin
+      variableMapping:
+        pythonScript.jenkinsServer: "${folder.test_Jenkins_Ref}"
+  scriptUsername: admin
+  scriptUserPassword: !value "xlrelease_Release_Test_Template_Folder_scriptUserPassword"
+  riskProfile: Default risk profile
+  author: admin
