@@ -1,6 +1,6 @@
 # Exported from:        http://Kirans-MacBook-Pro.local:5516/
 # Release version:      24.1.0
-# Date created:         Wed Jul 23 15:05:30 IST 2025
+# Date created:         Wed Jul 23 15:06:37 IST 2025
 
 ---
 apiVersion: xl-release/v1
@@ -9,6 +9,14 @@ metadata:
   path: /
   home: Folder_Versioning
 spec:
+- template: Dummy_template
+  scheduledStartDate: 2025-07-23T09:00:00+05:30
+  phases:
+  - phase: New Phase
+  scriptUsername: admin
+  scriptUserPassword: !value "xlrelease_Release_Dummy_template_scriptUserPassword"
+  riskProfile: Default risk profile
+  author: admin
 - template: Jenkins_Template_With_Vault_password
   scheduledStartDate: 2025-07-23T09:00:00+05:30
   phases:
