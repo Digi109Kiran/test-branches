@@ -1,0 +1,16 @@
+# Exported from:        http://Kirans-MacBook-Pro.local:5516/
+# Release version:      24.1.0
+# Date created:         Mon Sep 15 17:04:42 IST 2025
+
+---
+apiVersion: xl-release/v1
+kind: Templates
+metadata:
+  path: /
+  home: S-123155-Github
+spec:
+- name: Test-01
+  type: git.Repository
+  url: https://github.com/Digi109Kiran/test-branches
+  username: admin
+  password: !value "git_Repository_Test_01_password"
