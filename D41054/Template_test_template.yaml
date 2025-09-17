@@ -1,6 +1,6 @@
 # Exported from:        http://Kirans-MacBook-Pro.local:5516/
 # Release version:      24.1.0
-# Date created:         Wed Sep 17 16:04:50 IST 2025
+# Date created:         Wed Sep 17 16:05:27 IST 2025
 
 ---
 apiVersion: xl-release/v1
@@ -15,7 +15,7 @@ spec:
   - phase: New Phase
     tasks:
     - name: T1
-      type: xlrelease.UnknownType
+      type: xlrelease.ScriptTask
       owner: admin
       flagStatus: ATTENTION_NEEDED
       flagComment: Task 'T1' in Phase 'New Phase' has been replaced by an unknown
