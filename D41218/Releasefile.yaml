@@ -1,6 +1,6 @@
 # Exported from:        http://Kirans-MacBook-Pro.local:5516/
 # Release version:      24.1.0
-# Date created:         Wed Sep 17 11:20:22 IST 2025
+# Date created:         Wed Sep 17 11:20:48 IST 2025
 
 ---
 apiVersion: xl-release/v1
@@ -13,3 +13,4 @@ spec:
   - Template_t3.yaml
   - Template_t4.yaml
   - Template_t5.yaml
+  - Template_t6.yaml
