@@ -1,6 +1,6 @@
 # Exported from:        http://Kirans-MacBook-Pro.local:5516/
 # Release version:      24.1.0
-# Date created:         Wed Sep 17 11:19:06 IST 2025
+# Date created:         Wed Sep 17 11:19:27 IST 2025
 
 ---
 apiVersion: xl-release/v1
@@ -10,3 +10,4 @@ spec:
   - Notifications.yaml
   - Template_t1.yaml
   - Template_t2.yaml
+  - Template_t3.yaml
