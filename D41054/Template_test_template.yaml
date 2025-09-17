@@ -1,0 +1,21 @@
+# Exported from:        http://Kirans-MacBook-Pro.local:5516/
+# Release version:      24.1.0
+# Date created:         Wed Sep 17 16:03:25 IST 2025
+
+---
+apiVersion: xl-release/v1
+kind: Templates
+metadata:
+  path: /
+  home: D-41054
+spec:
+- template: Test_Template
+  scheduledStartDate: 2025-09-17T09:00:00+05:30
+  phases:
+  - phase: New Phase
+    tasks:
+    - name: T1
+      type: onboardplugin.OnboardPhase
+      owner: admin
+  riskProfile: Default risk profile
+  author: admin
