@@ -1,6 +1,6 @@
 # Exported from:        http://Kirans-MacBook-Pro.local:5516/
 # Release version:      24.1.0
-# Date created:         Wed Sep 17 16:05:27 IST 2025
+# Date created:         Thu Sep 18 14:14:05 IST 2025
 
 ---
 apiVersion: xl-release/v1
@@ -11,6 +11,7 @@ metadata:
 spec:
 - template: Test_Template
   scheduledStartDate: 2025-09-17T09:00:00+05:30
+  dueDate: 2025-09-17T10:00:00+05:30
   phases:
   - phase: New Phase
     tasks:
@@ -21,5 +22,7 @@ spec:
       flagComment: Task 'T1' in Phase 'New Phase' has been replaced by an unknown
         task. The task of type 'onboardplugin.OnboardPhase' could not be found because
         of a missing plugin.
+      script: print 'Hello'
+  realFlagStatus: ATTENTION_NEEDED
   riskProfile: Default risk profile
   author: admin
