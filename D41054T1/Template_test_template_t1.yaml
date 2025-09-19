@@ -1,0 +1,37 @@
+# Exported from:        http://Kirans-MacBook-Pro.local:5516/
+# Release version:      24.1.0
+# Date created:         Fri Sep 19 16:27:26 IST 2025
+
+---
+apiVersion: xl-release/v1
+kind: Templates
+metadata:
+  path: /
+  home: D-41054_T1
+spec:
+- template: Test_Template_T1
+  scheduledStartDate: 2025-09-19T09:00:00+05:30
+  phases:
+  - phase: New Phase
+    tasks:
+    - name: J1
+      type: xlrelease.UnknownTaskType
+      flagStatus: ATTENTION_NEEDED
+      flagComment: Task 'J1' in Phase 'New Phase' has been replaced by an unknown
+        task. The task of type 'jenkinsPlus.DevOpsJenkins' could not be found because
+        of a missing plugin.
+      originalType: jenkinsPlus.DevOpsJenkins
+      backup: "{\"id\":\"Release836fbe6b43464375a1a8c689541e072c/Phasebffef07582d94059aded4edca247b651/Task72f4ffef529f42c09181c345c5b1a596\"\
+        ,\"type\":\"jenkinsPlus.DevOpsJenkins\",\"title\":\"J1\",\"flagStatus\":\"\
+        OK\",\"overdueNotified\":false,\"comments\":[],\"container\":\"Release836fbe6b43464375a1a8c689541e072c/Phasebffef07582d94059aded4edca247b651\"\
+        ,\"attachments\":[],\"status\":\"PLANNED\",\"lastStatusChangeBy\":\"admin\"\
+        ,\"watchers\":[],\"waitForScheduledStartDate\":true,\"delayDuringBlackout\"\
+        :false,\"postponedDueToBlackout\":false,\"postponedUntilEnvironmentsAreReserved\"\
+        :false,\"hasBeenFlagged\":false,\"hasBeenDelayed\":false,\"preconditionType\"\
+        :\"JYTHON\",\"taskFailureHandlerEnabled\":false,\"failuresCount\":0,\"variableMapping\"\
+        :{},\"externalVariableMapping\":{},\"tags\":[],\"dueSoonNotified\":false,\"\
+        locked\":false,\"checkAttributes\":false,\"capabilities\":[\"remote\"],\"\
+        keepPreviousOutputPropertiesOnRetry\":false,\"url\":\"http://localhost:8082\"\
+        ,\"username\":\"admin\",\"password\":\"admin\",\"job\":\"Test\"}"
+  riskProfile: Default risk profile
+  author: admin
