@@ -9,9 +9,8 @@ metadata:
   path: /
   home: Test-Git-Versioning
 spec:
-- template: Template1
+- template: Template2
   scheduledStartDate: 2025-09-26T09:00:00+05:30
-  dueDate: 2025-09-26T10:00:00+05:30
   phases:
   - phase: New Phase
     tasks:
