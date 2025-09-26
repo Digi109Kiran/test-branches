@@ -1,10 +1,49 @@
 # Exported from:        http://Kirans-MacBook-Pro.local:5516/
 # Release version:      24.1.0
-# Date created:         Fri Sep 26 14:51:20 IST 2025
+# Date created:         Fri Sep 26 14:54:08 IST 2025
 
 ---
 apiVersion: xl-release/v1
-kind: Import
+kind: Templates
+metadata:
+  home: Test-Git-Versioning
 spec:
-  imports:
-  - Templates.yaml
+- pattern: Pattern1
+  stages:
+  - stage: New Stage
+- template: Template1
+  scheduledStartDate: 2025-09-26T09:00:00+05:30
+  dueDate: 2025-09-26T10:00:00+05:30
+  phases:
+  - phase: New Phase
+    tasks:
+    - name: New task
+      type: xlrelease.Task
+  riskProfile: Default risk profile
+  author: admin
+- template: Template2
+  scheduledStartDate: 2025-09-26T09:00:00+05:30
+  phases:
+  - phase: New Phase
+    tasks:
+    - name: New task
+      type: xlrelease.Task
+  riskProfile: Default risk profile
+  author: admin
+- template: Workflowtemplate1
+  scheduledStartDate: 2025-09-26T09:00:00+05:30
+  phases:
+  - phase: Workflow tasks
+    tasks:
+    - name: New task
+      type: xlrelease.Task
+  kind: WORKFLOW
+  disableNotifications: true
+  author: admin
+  defaultTargetFolder: ./
+- name: Trigger1
+  type: time.Schedule
+  releaseTitle: RAV
+  template: Template1
+  releaseFolder: D-40775
+  periodicity: 0 0 9-17 * * MON-FRI
