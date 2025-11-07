@@ -1,0 +1,19 @@
+# Exported from:        http://Kirans-MacBook-Pro.local:5516/
+# Release version:      24.1.0
+# Date created:         Fri Nov 07 07:24:42 CET 2025
+
+---
+apiVersion: xl-release/v1
+kind: Templates
+metadata:
+  path: /
+  home: S-125071
+spec:
+- template: Template_T1
+  scheduledStartDate: 2025-11-07T04:30:00+01:00
+  phases:
+  - phase: New Phase
+  scriptUsername: admin
+  scriptUserPassword: !value "xlrelease_Release_Template_T1_scriptUserPassword"
+  riskProfile: Default risk profile
+  author: admin
